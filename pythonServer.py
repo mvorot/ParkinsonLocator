@@ -1,8 +1,8 @@
-from python_speech_features import mfcc, delta
+from base import mfcc, delta
 from scipy.io import wavfile
 import numpy as np
 
-from flask import Flask, request, redirect, url_for, jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 from joblib import load
 
@@ -61,19 +61,8 @@ def extract_features_and_labels(audio_path):
     
     return combined_features, feature_labels
 
-# # Usage
-# features, labels = extract_features_and_labels('test5.wav')
-# for label, feature in zip(labels, features):
-#     print(f"{label}: {feature}")
-
-# # print("Extracted Features:", features)
-# print("Shape:", features.shape)
-
-# prediction = model.predict([features])
-# print("Prediction:", prediction[0])
-
 @app.route('/pdprediction', methods=['POST'])
-def predict():
+def pdpredict():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'})
     file = request.files['file']
@@ -82,11 +71,8 @@ def predict():
     if file:
         file.save('temp.wav')
         features, labels = extract_features_and_labels('temp.wav')
-        prediction = model.predict([features])
+        prediction = model2.predict([features])
         print("Prediction:", prediction[0])
         return jsonify({'prediction': int(prediction[0])})
     else:
         return jsonify({'error': 'No file'})
-    
-# if __name__ == "__main__":
-#     app.run(debug=True)

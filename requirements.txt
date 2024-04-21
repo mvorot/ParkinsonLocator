@@ -1,0 +1,11 @@
+Flask==2.2.5
+flask_cors==4.0.0
+joblib
+scipy
+scikit-learn==1.2.2
+numpy
+Gunicorn
+pandas
+seaborn
+plotly
+matplotlib
