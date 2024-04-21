@@ -71,8 +71,14 @@ def pdpredict():
     if file:
         file.save('temp.wav')
         features, labels = extract_features_and_labels('temp.wav')
-        prediction = model2.predict([features])
+        prediction = model.predict([features])
         print("Prediction:", prediction[0])
         return jsonify({'prediction': int(prediction[0])})
     else:
         return jsonify({'error': 'No file'})
+    
+# for local testing
+# if __name__ == '__main__':
+#     app.run(port=3001, debug=True)
+
+# This model is already running on a server called https://aitictactoebackend.onrender.com/pdprediction
