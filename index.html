@@ -19,10 +19,7 @@
                 <div class="row head-ro">
                     <div class="col-md-3 logo">
                         <img src="images/brain.png" alt="">
-
-
                                  <a class="d-md-none small-menu" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-
                                 <i class="fas d-lg-none  fa-bars"></i>
                            </a>
                     </div>
@@ -34,28 +31,22 @@
                     </div>
                 </div>
             </div>
-
         </header>
     </div>
 
-    <!-- ***************************** Banner Starts Here *********************************-->
     <section class="container-fluid banner-container">
         <div class="container">
             <div class="row banner-row">
                 <div class="col-md-6 banner-txt">
-                    <!-- <h1>Interesting facts</h1>
-                    <h4>•No two people have the same exact symptoms</h4>
-                    <p>The progression of symptoms is often different from one person to another due to the diversity of the disease.</p>
-                    <h4>•Preventing Parkinson's</h4> -->
-                      <!-- <p>Increasing your physical health by doing a regular basis of exercise is a good way of preventing parkinsons disease that along with improving your diet filling it with vegtables and fruits! </p> -->
-                      <h1>Parkinson's Disease Detection</h4>
-                      <p>Machine learning methods have been developed to detect Parkinson's Disease. By uploading a short clip of you saying the /a/ syllable (as in the words: after /’ɑːftə/, last /lɑːst/, and ask /ɑːsk/)</p>
+                    <h1>Parkinson's Disease Detection</h1>
+                    <p>Machine learning methods have been developed to detect Parkinson's Disease. By uploading a short clip of you saying the /a/ syllable (as in the words: after /’ɑːftə/, last /lɑːst/, and ask /ɑːsk/)</p>
                     <div class="btn-row row">
-                        <div>Upload .wav file here</div>
-                        <form id="upload-form" enctype="multipart/form-data">
-                            <input type="file" name="file" accept=".wav">
-                            <button id="upload-button" type="submit">Upload File</button>
-                        </form>
+                        <div class="file-upload">
+                            <form id="upload-form" enctype="multipart/form-data">
+                                <input type="file" name="file" accept=".wav" id="file-input">
+                                <button id="upload-button" type="submit" class="btn-bubbly">Upload File</button>
+                            </form>
+                        </div>
                    </div>
                </div>
                <div class="col-md-6 banner-img">
@@ -64,6 +55,8 @@
            </div>
        </div>
    </section>
+
+
    <!-- ***************************** Key Features Starts Here *********************************-->
    <div class="container-fluid key-featurecont">
        <div class="container">
