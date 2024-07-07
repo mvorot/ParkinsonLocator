@@ -223,10 +223,10 @@
             .then(data => {
                 console.log('Success:', data);
                 if(data.prediction === 1) {
-                    alert('Based on the analysis, you do not have Parkinson\'s Disease.');
+                    alert("Based on the analysis you do not have Parkinson\'s Disease. *Warning* If you're still concered for your health or face similar symptoms please call the parkinson helpline we provide, we aren't a verified diagnose source." );
                     
                 } else if(data.prediction === 0) {
-                    alert('Based on the analysis, you have Parkinson\'s Disease.');
+                    alert("Based on the analysis you have Parkinson\'s Disease. Please call the parkinson helpline we provide, we aren't a verified diagnose source.");
                 } else {
                     alert('Error: Unexpected prediction value received.');
                 }
