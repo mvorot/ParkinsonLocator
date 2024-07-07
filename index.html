@@ -223,9 +223,10 @@
             .then(data => {
                 console.log('Success:', data);
                 if(data.prediction === 1) {
-                    alert('Based on the analysis, you have Parkinson\'s Disease.');
-                } else if(data.prediction === 0) {
                     alert('Based on the analysis, you do not have Parkinson\'s Disease.');
+                    
+                } else if(data.prediction === 0) {
+                    alert('Based on the analysis, you have Parkinson\'s Disease.');
                 } else {
                     alert('Error: Unexpected prediction value received.');
                 }
